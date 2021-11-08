@@ -1,0 +1,18 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+       
+        int temp = 0; // created a temporary array
+       
+        int k=0; // initialized a variable k 
+        for (int i=0;i<nums.length; i++){ // started a loop to iterarate through the array 
+            if (nums[i] !=val){
+                temp = nums[k]; // adds the first element for the first iteration the temp array 
+                nums[k] = nums[i]; // assigns the value at nums[i] to the index k. 
+                nums[i] = temp; //
+                k++;
+                }
+            }
+        return k;
+      
+    }
+}
