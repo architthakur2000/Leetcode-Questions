@@ -1,6 +1,6 @@
 // Brute force solution 
 // Time complexity - O(n^2)
-// Space complexity - O(1)
+// Space complexity - O(1).
 class Solution {
     public int maxProfit(int[] prices) {
         int max_profit = 0;
