@@ -12,6 +12,7 @@ class Solution {
                     temp1[1] = i;     
                 }
             }
+            
         }
         return temp1;     
     }
