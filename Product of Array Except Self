@@ -1,0 +1,31 @@
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int N = nums.length;
+        int[] left = new int[N]; // move left to right calculating previous products
+        int[] right = new int[N];// move right to left calculating previous products
+        int[] answer = new int[N];
+        left[0]=1;
+        right[N-1]=1;
+        
+        int prod_1=1;
+        int prod_2=1;
+        
+        for(int i=1;i<nums.length;i++){
+            prod_1 = nums[i-1] * prod_1;
+            left[i] = prod_1;
+        }
+        
+        for(int i=N-2;i>=0;i--){
+            prod_2 = nums[i+1] * prod_2;
+            right[i] = prod_2;
+        }
+        
+        for(int i=0;i<nums.length;i++){
+            answer[i] = left[i] * right[i];
+        }
+        
+        return answer;
+        
+    }
+}
+     
